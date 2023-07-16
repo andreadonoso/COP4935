@@ -16,26 +16,54 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <body>
     <form id="form1" runat="server">
-	<div style="background: linear-gradient(243.15deg, #AFD8E5 0.39%, #2B82C0 99.15%); width: 100%; height: 100%; position: absolute; top: 0; left: 0; text-align: center; padding: 100px">
-		<h1></h1>
-		<div style="background: rgba(0,0,0,0.19); width: 558px; height: 580px; top: 50%; left: 50%; margin: auto; border-radius: 20px; padding: 10px;">
+	<div style="background: linear-gradient(243.15deg, #AFD8E5 0.39%, #2B82C0 99.15%); position: absolute; top: 0; left: 0; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+		<div style = "position: absolute; top: 10px; left: 10px;">
+			<img src="palm-tree.png" alt= "Palm Tree Logo" width="50" height="50">
+		</div>
+		<div style="background: rgba(0,0,0,0.19); width: 75%; max-width: 558px; height: 487px; margin: auto; border-radius: 20px;">
+			<br /><br /><br />
 			<center>
-				<table>
-                	<tr><h1 style="color: #FFFFFF; width: 558px; height: 54px; top: 371px; left: 441px; font-size: 48px; font-weight: 900; line-height: 54px; letter-spacing: 0em; text-align: center;">Login</h1></tr>
-					<tr><label for="txtEmail" style = "color: white; float: left; padding-left: 94px; padding-top: 50px ">Email<label style = "color: red">*</label></label></tr>
-                    <tr><input type="text" runat="server" id="txtEmail" style="background: #00000030; width: 422px; height: 64px; top: 499px; left: 510px; border-radius: 10px; border: none" placeholder = "nid@ucf.edu" /></tr>
-					<tr><label for="txtPassword" style = "color: white; float: left; padding-left: 94px; padding-top: 50px ">Password<label style = "color: red">*</label></label></tr>
-  					<tr><input type="text" runat="server" id="txtPassword" style="background: #00000030; width: 422px; height: 64px; top: 499px; left: 510px; border-radius: 10px; border: none"/></tr>
-					<tr><td colspan="2">&nbsp;</td></tr>
-                    <tr><td colspan="2" align="center" style = "padding: 30px"><input type="button" id="btnLogin" value="Login" onclick="btnLogin_Click" style = "color: white; background: #000000; width: 164px; height: 46px; top: 616px; left: 639px; border-radius: 10px; border: none"/></td></tr>
-					<tr><td colspan="2" align="center"><asp:Label runat="server" ID="lblError" Text="" ForeColor="salmon" /></td></tr>
+				<table style="width: 100%;">
+                	<tr>
+						<td colspan="2" style="text-align: center;">
+						  <h1 style="color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Login</h1>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan="2" align="center" "padding: 20px 30px;">
+						  <label for="txtEmail" style=" color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
+						  <input type="text" runat="server" id="txtEmail" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center" "padding: 20px 30px;">
+						  <label for="txtPassword" style=" color: white; margin-bottom: 10px;padding-right: 55%;">Password<label style="color: red">*</label></label><br>
+						  <input type="text" runat="server" id="txtPassword" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;"/>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center" style="padding: 20px;">
+						  <input type="button" id="btnLogin" value="Login" onclick="btnLogin_Click()" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center">
+						  <label id="lblError" style="color: salmon;"></label>
+						</td>
+					</tr>  
 				</table>
 			</center>
 			<center>
 				<a href="Forgot.aspx" style="color:white">Forgot Password</a>
 			</center>
+			<br /><br />
 		</div>
     </div>
     </form>
