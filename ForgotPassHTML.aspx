@@ -1,3 +1,4 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Forgot.aspx.cs" Inherits="Forgot" %>
 
 <!DOCTYPE html>
 
