@@ -21,6 +21,22 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script>
+    function sendDataToServer() {
+      var errorMessage = document.getElementById("lblError").textContent;
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "Forgot.aspx?errorMessage=" + encodeURIComponent(errorMessage), true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log("Data sent to the server.");
+          window.location.href = "Default.aspx";
+        }
+      };
+      xhr.send();
+    }
+  </script>
+  
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <body>
@@ -60,12 +76,12 @@
             </tr> -->
             <tr>
               <td colspan="2" align="center" style="padding: 20px;">
-                <input type="button" id="btnRecover" value="Recover" onclick="btnRecover_Click()" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+                <input type="button" id="btnRecover" value="Recover" onclick="sendDataToServer();" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
               </td>
             </tr>
             <!-- <tr>
               <td colspan="2" align="center" style="padding: 20px;">
-                <asp:Button ID="btnRecover" runat="server" Text="Recover" OnClick="btnRecover_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+                <asp:Button ID="btnRecover" runat="server" Text="Recover" OnClick="sendDataToServer();" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
               </td>
             </tr> -->            
             <tr>

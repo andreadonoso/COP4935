@@ -13,7 +13,8 @@ public partial class Forgot : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+    	string errorMessage = lblError.Text;
+    	console.log(errorMessage);
     }
 	
 	static string[] chars = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F" };
