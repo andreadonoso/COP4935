@@ -37,30 +37,46 @@
           <table style="width: 100%;">
             <tr>
               <td colspan="2" style="text-align: center;">
-                <h1 style="color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Forgot Password</h1>
+                <h1 style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Forgot Password</h1>
               </td>
             </tr>
             <tr>
               <td colspan="2" style="text-align: center;">
-                <h2 style="color: #FFFFFF; font-size: 14px; width : 75%; line-height: 20px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Enter your account's email address and we'll send you a link to reset your password</h2>
+                <h2 style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: 14px; width : 75%; line-height: 20px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Enter your account's email address and we'll send you a link to reset your password</h2>
               </td>
             </tr>
             <tr>
-              <td colspan="2" align="center" "padding: 20px 30px;">
-                <label for="txtEmail" style=" color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
-                <input type="text" runat="server" id="txtEmail" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+              <td colspan="2" align="center" style = "padding: 20px 30px;">
+                <label for="txtEmail" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
+                <input type="text" id="txtEmail" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
               </td>
             </tr>
+            <!-- <tr>
+              <td colspan="2" align="center" style="padding: 20px 30px;">
+                <label for="txtEmail" style="color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
+                <asp:TextBox ID="txtEmail" runat="server" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+              </td>
+            </tr> -->
             <tr>
               <td colspan="2" align="center" style="padding: 20px;">
                 <input type="button" id="btnRecover" value="Recover" onclick="btnRecover_Click()" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
               </td>
             </tr>
+            <!-- <tr>
+              <td colspan="2" align="center" style="padding: 20px;">
+                <asp:Button ID="btnRecover" runat="server" Text="Recover" OnClick="btnRecover_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+              </td>
+            </tr> -->            
             <tr>
               <td colspan="2" align="center">
                 <input type="button" id="btnBack" value="Back To Login" onclick="btnBack_Click()" style="color: white; border: none; background: none; cursor: pointer; margin: 0;" />
               </td>
             </tr>
+            <!-- <tr>
+              <td colspan="2" align="center">
+                <asp:Button ID="btnBack" runat="server" Text="Back To Login" OnClick="btnBack_Click" style="color: white; border: none; background: none; cursor: pointer; margin: 0;" />
+              </td>
+            </tr>             -->
             <tr>
               <td colspan="2">&nbsp;</td>
             </tr>
@@ -68,7 +84,12 @@
               <td colspan="2" align="center">
                 <label id="lblError" style="color: salmon;"></label>
               </td>
-            </tr>  
+            </tr> 
+            <!-- <tr>
+              <td colspan="2" align="center">
+                <asp:Label ID="lblError" runat="server" style="color: salmon;"></asp:Label>
+              </td>
+            </tr>  -->
           </table>
         </center>
         <br /><br />
