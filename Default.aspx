@@ -4,6 +4,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+	<style>
+		input::placeholder {
+		opacity: 0.5;
+		color: white;
+		padding-left: 10px;
+		}
+		/* Style for email and password input fields */
+		input[type="email"],input[type="password"] {
+			background: #CCCCCC; /* Gray background color */
+			width: 75%;
+			height: 40px;
+			color: #FFFFFF;
+			border-radius: 10px;
+			border: none;
+			margin: 0 auto;
+			padding: 5px 10px;
+		}
+	</style>
+
     <title>COP 4935 Meeting Check In and Peer Review</title>
 
 	<!-- Latest compiled and minified CSS -->
@@ -29,33 +48,33 @@
 				<table style="width: 100%;">
                 	<tr>
 						<td colspan="2" style="text-align: center;">
-						  <h1 style="color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Login</h1>
-						</td>
-					</tr>
-					
-					<tr>
-						<td colspan="2" align="center" "padding: 20px 30px;">
-						  <label for="txtEmail" style=" color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
-						  <input type="text" runat="server" id="txtEmail" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+						  <h1 style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Login</h1>
 						</td>
 					</tr>
 
 					<tr>
-						<td colspan="2" align="center" "padding: 20px 30px;">
-						  <label for="txtPassword" style=" color: white; margin-bottom: 10px;padding-right: 55%;">Password<label style="color: red">*</label></label><br>
-						  <input type="text" runat="server" id="txtPassword" style="background: #00000030; width: 75%; height: 40px; border-radius: 10px; border: none; margin: 0 auto;"/>
+						<td colspan="2" align="center" style="padding: 20px 30px;">
+						  <label for="txtEmail" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
+						  <asp:TextBox ID="txtEmail" runat="server" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center" style="padding: 20px 30px;">
+						  <label for="txtPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Password<label style="color: red">*</label></label><br>
+						  <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px;">
-						  <input type="button" id="btnLogin" value="Login" onclick="btnLogin_Click()" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+						  <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
 						</td>
 					</tr>
 
 					<tr>
 						<td colspan="2" align="center">
-						  <label id="lblError" style="color: salmon;"></label>
+						  <asp:Label runat="server" ID="lblError" Text="" ForeColor="salmon" />
 						</td>
 					</tr>  
 				</table>
