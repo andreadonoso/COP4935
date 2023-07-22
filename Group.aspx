@@ -53,9 +53,11 @@
 					</tr>
 
 					<tr>
-						<td colspan="2" align="center" style="padding: 20px 30px;">
-						  <label for="txtGroup" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">New Group</label><br>
-						  <asp:TextBox ID="txtGroup" runat="server" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
+						<td style="text-align: right;padding: 20px 30px; width: 50%;">
+						  <label for="txtGroup" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 10%;">New Group</label>
+						</td>
+						<td>
+						  <asp:TextBox ID="txtGroup" runat="server" style="background: #00000030; width: 48%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
 

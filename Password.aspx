@@ -54,14 +54,14 @@
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px 30px;">
-							<label for="txtNewPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">New Password</label><br>
+							<label for="txtNewPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 54%;">New Password</label><br>
 							<asp:TextBox TextMode="Password" runat="server" ID="txtPassword" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px 30px;">
-							<label for="txtConfirmPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Confirm Password</label><br>
+							<label for="txtConfirmPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 49%;">Confirm Password</label><br>
 							<asp:TextBox TextMode="Password" runat="server" ID="txtConfirmPassword" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
