@@ -54,14 +54,14 @@
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px 30px;">
-						  <label for="txtEmail" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Email<label style="color: red">*</label></label><br>
-						  <asp:TextBox ID="txtEmail" runat="server" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;" placeholder="nid@ucf.edu" />
+						  <label for="txtEmail" style="text-align: left; font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 65%;">Email<label style="color: red">*</label></label><br>
+						  <asp:TextBox ID="txtEmail" runat="server" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;" placeholder="Your NID: rl123456" />
 						</td>
 					</tr>
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px 30px;">
-						  <label for="txtPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 55%;">Password<label style="color: red">*</label></label><br>
+						  <label for="txtPassword" style="text-align: left; font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 59%;">Password<label style="color: red">*</label></label><br>
 						  <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>

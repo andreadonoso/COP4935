@@ -46,38 +46,38 @@
 			<br /><br /><br />
 			<center>
 				<table style="width: 100%;">
-					<tr>
-						<td colspan="2" style="text-align: center;">
-						  <h1 style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Change Group</h1>
-						</td>
-					</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<h1 style="font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; font-size: 35px; width: 75%; font-weight: 900; line-height: 34px; letter-spacing: 0em; margin: 0 auto; padding-bottom: 10px;">Change Group</h1>
+					</td>
+				</tr>
 
-					<tr>
-						<td style="text-align: right;padding: 20px 30px; width: 50%;">
-						  <label for="txtGroup" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 10%;">New Group</label>
-						</td>
-						<td>
-						  <asp:TextBox ID="txtGroup" runat="server" style="background: #00000030; width: 48%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
-						</td>
-					</tr>
+				<tr>
+					<td style="text-align: right;padding: 20px 30px; width: 50%;">
+						<label for="txtGroup" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 10%;">New Group</label>
+					</td>
+					<td>
+						<asp:TextBox ID="txtGroup" runat="server" style="background: #00000030; width: 48%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
+					</td>
+				</tr>
 
-					<tr>
-						<td colspan="2" align="center" style="padding: 20px;">
-							<asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
-						</td>
-					</tr>
+				<tr>
+					<td colspan="2" align="center" style="padding: 20px;">
+						<asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+					</td>
+				</tr>
 
-					<tr>
-						<td colspan="2" align="center">
-							<asp:Label ID="lblError" runat="server" ForeColor="salmon" />
-						</td>
-					</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<asp:Label ID="lblError" runat="server" ForeColor="salmon" />
+					</td>
+				</tr>
 
-					<tr>
-						<td colspan="2" align="center" style="padding: 20px;">
-							<asp:Button ID="btnBackToLandingPage" runat="server" Text="Back To Landing Page" OnClick="btnBackToLandingPage_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
-						</td>
-					</tr>
+				<tr>
+					<td colspan="2" align="center" style="padding: 20px;">
+						<asp:Button ID="btnBackToLandingPage" runat="server" Text="Back To Landing Page" OnClick="btnBackToLandingPage_Click" style="color: white; background-color: transparent; width: 70%; height: 40px; border: none" />
+					</td>
+				</tr>
 				</table>
 			</center>
 			<br />

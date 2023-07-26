@@ -10,17 +10,6 @@
 		color: white;
 		padding-left: 10px;
 		}
-		/* Style for email and password input fields */
-		input[type="email"],input[type="password"] {
-			background: #CCCCCC; /* Gray background color */
-			width: 75%;
-			height: 40px;
-			color: #FFFFFF;
-			border-radius: 10px;
-			border: none;
-			margin: 0 auto;
-			padding: 5px 10px;
-		}
 	</style>
 
     <title>COP 4935 Change Password</title>
@@ -53,15 +42,15 @@
 					</tr>
 
 					<tr>
-						<td colspan="2" align="center" style="padding: 20px 30px;">
-							<label for="txtNewPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 54%;">New Password</label><br>
+						<td colspan="2" align="left" style="padding: 20px 0px 20px 110px;">
+							<label for="txtNewPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px; text-align: left; padding-left: 0%;">New Password</label><br>
 							<asp:TextBox TextMode="Password" runat="server" ID="txtPassword" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
 
 					<tr>
-						<td colspan="2" align="center" style="padding: 20px 30px;">
-							<label for="txtConfirmPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px;padding-right: 49%;">Confirm Password</label><br>
+						<td colspan="2" align="left" style="padding: 20px 0px 20px 110px;">
+							<label for="txtConfirmPassword" style="font-family: sans-serif; color: white; margin-bottom: 10px; text-align: left; padding-left: 0%;">Confirm Password</label><br>
 							<asp:TextBox TextMode="Password" runat="server" ID="txtConfirmPassword" style="background: #00000030; width: 75%; height: 40px; color:#FFFFFF; border-radius: 10px; border: none; margin: 0 auto;"/>
 						</td>
 					</tr>
@@ -80,7 +69,7 @@
 
 					<tr>
 						<td colspan="2" align="center" style="padding: 20px;">
-							<asp:Button ID="btnBackToLandingPage" runat="server" Text="Back To Landing Page" OnClick="btnBackToLandingPage_Click" style="color: white; background: #000000; width: 30%; height: 40px; border-radius: 10px; border: none" />
+							<asp:Button ID="btnBackToLandingPage" runat="server" Text="Back To Landing Page" OnClick="btnBackToLandingPage_Click" style="color: white; background-color: transparent; width: 70%; height: 40px; border: none" />
 						</td>
 					</tr>
 				</table>
