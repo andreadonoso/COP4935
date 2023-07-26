@@ -29,7 +29,9 @@ public partial class PeerReview : System.Web.UI.Page
 			// Change..
 			// litPeerReview.Text = "<table border=1>\r\n<tr><th>Date</th><th>Group</th><th>Members</th><th>Scores</th></tr>\r\n";
 			// to 2-21-2021
-			litPeerReview.Text = "<table border=1>\r\n<tr><th>Date</th><th>Group</th><th>Members</th><th>Scores</th><th>Comments</th></tr>\r\n";
+			
+			// Headers 
+			litPeerReview.Text = "<table border=1>\r\n<tr><th>Criteria</th><th>Scores</th></tr>\r\n";
 
 			string error = String.Empty;
 			dates = Utils.getDates(ref error);
@@ -102,7 +104,7 @@ public partial class PeerReview : System.Web.UI.Page
 					string comments = createCommentsList(pri.comments);
 
 					//																														{4} added 2-21-2021																									2-21-2021
-					string scoreTable = String.Format("<tr><td valign=top>{1}</td><td valign=top>{2}</td><td valign=top>{3}</td><td valign=top>{0}</td><td valign=top>{4}</td></tr>\r\n", createScoreTable(pri.parts, pri.voters[0]), pri.dateTaken, pri.group, members, comments);
+					string scoreTable = String.Format("<tr><td>{0}</td><tr><table><th>Comments</th></tr><tr><td class = comment-cell>{4}</td></tr></tr>\r\n", createScoreTable(pri.parts, pri.voters[0]), pri.dateTaken, pri.group, members, comments);
 
 					string cmp = members.Replace("<table>","").Replace("</table>","");
 
@@ -305,7 +307,7 @@ public partial class PeerReview : System.Web.UI.Page
 		{
 			if( group == ui.groupNumber )
 			{
-				ret += String.Format("<tr><td>{0} {1}</td></tr>\r\n", ui.first, ui.last);
+				// ret += String.Format("<tr><td>{0} {1}</td></tr>\r\n", ui.first, ui.last);
 			}
 		}
 		ret += "</table>\r\n";
@@ -341,12 +343,12 @@ public partial class PeerReview : System.Web.UI.Page
 		{
 			partValues[i] /= count;
 			total += partValues[i];
-			ret += String.Format("<tr><td align=right>{1}</td><td align=center>{0}</td></tr>\r\n", partValues[i], Utils.categories[i] );
+			ret += String.Format("<tr><td class = criteria-cell>{1}</td><td class=score-cell>{0}</td></tr>\r\n", partValues[i], Utils.categories[i] );
 		}
 
-		ret += String.Format("<tr><td align=right>Total&nbsp;</td><td align=center>{0}</td></tr>\r\n", total);
+		ret += String.Format("<tr><td class = criteria-cell>Total&nbsp;</td><td class=score-cell>{0}</td></tr>\r\n", total);
 
-		ret += "</table\r\n";
+		ret += "</table>\r\n";
 
 		return ret;
 	}
