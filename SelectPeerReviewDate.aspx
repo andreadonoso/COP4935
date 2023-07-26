@@ -52,8 +52,8 @@
             
         </center>
         <br />
-        <button id="btnBackToLandingPage" onclick="btnBackToLandingPage_Click()"style="width:100%;max-width:190px;color: white; background: #000000; height: 40px; border-radius: 10px; border: none;@media screen and (max-width: 480px) {
-            font-size: 14px; /* Adjust font size for mobile view */}">Exit</button>
+        <asp:Button ID="btnBackToLandingPage" runat="server" Text="Exit" style="width:100%;max-width:190px;color: white; background: #000000; height: 40px; border-radius: 10px; border: none;@media screen and (max-width: 480px) {
+            font-size: 14px; /* Adjust font size for mobile view */}" OnClick="btnBackToLandingPage_Click" />
     </div>
     
 	</div>
