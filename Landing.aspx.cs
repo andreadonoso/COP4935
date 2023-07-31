@@ -31,7 +31,7 @@ public partial class Landing : System.Web.UI.Page
 			Response.Redirect("Group.aspx");
 		}
 
-//		litBoxDiv.Text = "<div style=\"background-color: #eeffee; width:500px; height: 484px; margin: auto; border-radius: 25px;\" id=\"mainBox\">";
+//		litBoxDiv.Text = "<div style=\"background-color: #eeffee; width:500px; height:litBoxDiv 484px; margin: auto; border-radius: 25px;\" id=\"mainBox\">";
 
 //		Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"];
 		lblFirst.Text = ui.first;
@@ -45,52 +45,45 @@ public partial class Landing : System.Web.UI.Page
 
 		if( ui.permissions == 0 )
 		{
-			litBoxDiv.Text = "<div style=\"background-color: #eeffee; width:500px; height: 550px; margin: auto; border-radius: 25px;\" id=\"mainBox\">";
+            litBoxDiv.Text = "<div style=\"width: 90vw; min-width: 400px; height: 80vh; min-height: 596px; display: flex; background-color: rgba(0, 0, 0, 0.19); color: #ffffff; margin: 0; border-radius: 25px;\" id=\"mainBox\">";
 		}
 		else
 		{
-			litBoxDiv.Text = "<div style=\"background-color: #eeffee; width:500px; height: 596px; margin: auto; border-radius: 25px;\" id=\"mainBox\">";
+            litBoxDiv.Text = "<div style=\"width: 90vw; min-width: 400px; height: 80vh; min-height: 596px; display: flex; background-color: rgba(0, 0, 0, 0.19); color: #ffffff; margin: 0; border-radius: 25px;\" id=\"mainBox\">";
 		}
     }
 
-	protected void btnLogOut_Click(object sender, EventArgs e)
-	{
-		Session["UserInfo"] = null;
-		Response.Redirect("Default.aspx");
-	}
+    protected void btnUserInfo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Landing.aspx");
+    }
 
-	protected void btnGiveGroupPeerReview_Click(object sender, EventArgs e)
-	{
-		Response.Redirect("GiveTeamPeerReview.aspx");
-	}
+    protected void btnCDR_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CDR.aspx");
+    }
+
+    protected void btnAdmin_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Admin.aspx");
+    }
+
+    protected void btnLogOut_Click(object sender, EventArgs e)
+    {
+        Session["UserInfo"] = null;
+        Response.Redirect("Default.aspx");
+    }
+
+    protected void btnCHangeGroup_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Group.aspx");
+    }
+
+    protected void btnChangePassword_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Password.aspx");
+    }
 	
-	protected void btnChangePassword_Click(object sender, EventArgs e)
-	{
-		Response.Redirect("Password.aspx");
-	}
-
-	protected void btnMeetings_Click(object sender, EventArgs e)
-	{
-		Response.Redirect("TeamMeetings.aspx");
-	}
-
-	protected void btnPeerReview_Click(object sender, EventArgs e)
-	{
-		int check = checkDateOK();
-		Session["PeerReviewID"] = null;
-		if (check == 2)
-		{
-			Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"];
-			Session["NID"] = ui.NID;
-			Response.Redirect("PeerReviewForm.aspx");
-		}
-		else if( check == 1 )
-		{
-			Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"];
-			Session["NID"] = ui.NID;
-			Response.Redirect("SelectPeerReviewDate.aspx");
-		}
-	}
 
 	int checkDateOK()
 	{
@@ -154,22 +147,4 @@ public partial class Landing : System.Web.UI.Page
 
 		return ret;
 	}
-
-	protected void btnAdmin_Click(object sender, EventArgs e)
-	{
-		Response.Redirect("Admin.aspx");
-	}
-
-	protected void btnCHangeGroup_Click(object sender, EventArgs e)
-	{
-		Response.Redirect("Group.aspx");
-	}
-
-	protected void btnSeeMyGroupsPeerReview_Click(object sender, EventArgs e)
-	{
-		Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"];
-		Session["GroupForReport"] = ui.groupNumber;
-		Response.Redirect("PeerReview.aspx");
-	}
-
 }

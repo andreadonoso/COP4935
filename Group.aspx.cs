@@ -17,11 +17,33 @@ public partial class Group : System.Web.UI.Page
 			Response.Redirect("Default.aspx");
 		}
 
+        Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"]; // MAYBE COPY THIS TOO
 		if( !IsPostBack )
 		{
-			Utils.UserInfo ui = (Utils.UserInfo)Session["UserInfo"];
+			ui = (Utils.UserInfo)Session["UserInfo"];
 			txtGroup.Text = Convert.ToString(ui.groupNumber);
 		}
+
+        // START COPY1
+        if (ui.permissions == 0)
+        {
+            btnAdmin.Visible = false;
+        }
+
+        if (ui.groupNumber == -1)
+        {
+            Response.Redirect("Group.aspx");
+        }
+
+        if (ui.permissions == 0)
+        {
+            litBoxDiv.Text = "<div style=\"width: 90vw; min-width: 400px; height: 80vh; min-height: 596px; display: flex; background-color: rgba(0, 0, 0, 0.19); color: #ffffff; margin: 0; border-radius: 25px;\" id=\"mainBox\">";
+        }
+        else
+        {
+            litBoxDiv.Text = "<div style=\"width: 90vw; min-width: 400px; height: 80vh; min-height: 596px; display: flex; background-color: rgba(0, 0, 0, 0.19); color: #ffffff; margin: 0; border-radius: 25px;\" id=\"mainBox\">";
+        }
+        // END COPY1
 	}
 
 	protected void btnUpdate_Click(object sender, EventArgs e)
@@ -74,4 +96,26 @@ public partial class Group : System.Web.UI.Page
 		Response.Redirect("Landing.aspx");
 	}
 
+    // START COPY2
+    protected void btnUserInfo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Landing.aspx");
+    }
+
+    protected void btnCDR_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CDR.aspx");
+    }
+
+    protected void btnAdmin_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Admin.aspx");
+    }
+
+    protected void btnLogOut_Click(object sender, EventArgs e)
+    {
+        Session["UserInfo"] = null;
+        Response.Redirect("Default.aspx");
+    }
+    // END COPY2
 }
