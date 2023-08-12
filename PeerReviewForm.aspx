@@ -155,15 +155,18 @@
 
 	<div class="SubmitButtonBlock">
 		<asp:Literal runat="server" ID="litSubmitButton" />
-	</div>`
+		
+	</div>
+		
+	
 
 	<div class="SubmitButtonBlock">
 		<span id="errorMessage" class="ErrorMessage"></span>
 	</div>
 
     <form id="form1" runat="server">
-    <div>
-    
+    <div class = "SubmitButtonBlock">
+		<asp:Button ID="btnBackToCDR" runat="server" Text="Exit" style = "font-size:13.3333px; font-family: Arial; width:150px; height:40px;" OnClick="btnBackToCDR_Click" />
     </div>
 	<asp:Literal runat="server" ID="litScript" />
     </form>

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,6 +24,7 @@ public partial class CDR : System.Web.UI.Page
 		if (ui.permissions == 0)
 		{
 			btnAdmin.Visible = false;
+            btnAdminMenu.Visible = false;
 		}
 		
 		if (ui.groupNumber == -1)

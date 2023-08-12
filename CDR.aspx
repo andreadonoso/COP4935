@@ -82,6 +82,7 @@
                                     CDR Peer Reviews
                                 </asp:LinkButton>
                             </li>
+                            <br/>
                             <li class="nav-item">
                                 <asp:Button ID="btnAdminMenu" runat="server" Text="Admin" Width="100%" OnClick="btnAdmin_Click" style="color: white; background: #0094FF; height: 40px; border-radius: 10px; border: none;"/>
                             </li>
@@ -124,6 +125,7 @@
                                     CDR Peer Reviews
                                 </asp:LinkButton>
                             </div>
+                            <br/>
                             <div style="margin-bottom: 16px">
                                 <asp:Button ID="btnAdmin" runat="server" Text="Admin" Width="190px" OnClick="btnAdmin_Click" style="color: white; background: #0094FF; height: 40px; border-radius: 10px; border: none;"/>
                                 <div style="margin-top: 10px; margin-bottom: 10px; background-color: #ffffff; width: 190px; height: 1px; border-radius: 25px;"></div>

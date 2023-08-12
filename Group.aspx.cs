@@ -28,6 +28,7 @@ public partial class Group : System.Web.UI.Page
         if (ui.permissions == 0)
         {
             btnAdmin.Visible = false;
+            btnAdminMenu.Visible = false;
         }
 
         if (ui.groupNumber == -1)

@@ -49,5 +49,8 @@ public partial class PeerReviewForm : System.Web.UI.Page
 			return -1;
 		}
 	}
-
+    protected void btnBackToCDR_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CDR.aspx");
+    }
 }
